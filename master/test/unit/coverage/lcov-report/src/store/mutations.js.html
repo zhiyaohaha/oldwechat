@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/store/mutations.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/store</a> mutations.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/86</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/85</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export defaul<span class="cstat-no" title="statement not covered" >t {<span class="cstat-no" title="statement not covered" ></span></span>
+  POST_OPENID(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+<span class="cstat-no" title="statement not covered" >    state.userName = result.data.name</span>
+  },
+  SUBSCRIBE(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //用户基本信息
+<span class="cstat-no" title="statement not covered" >    state.subscribe = result</span>
+  },
+  GET_LISTFORAPP(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //首页产品列表
+<span class="cstat-no" title="statement not covered" >    state.recommendModDatas = result.data</span>
+  },
+  GET_LISTFORAPPLONG(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //产品列表
+<span class="cstat-no" title="statement not covered" >    state.recommendDatas = result.data</span>
+  },
+  GET_DETAILEDFOR(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //产品详情
+<span class="cstat-no" title="statement not covered" >    state.productDetailsPageData = result.data</span>
+  },
+  GET_LISTBANKS(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //11大银行列表
+<span class="cstat-no" title="statement not covered" >    state.listBanks = result</span>
+  },
+  GET_HOMELISTBANKCARD(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //首页热门银行卡列表
+<span class="cstat-no" title="statement not covered" >    state.homeListBankCard = result.data</span>
+  },
+  GET_CREDITLISTBANKCARD(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //银行卡列表
+<span class="cstat-no" title="statement not covered" >    state.creditListBankCard = result.data</span>
+  },
+  GET_ALLLISTBANKCARD(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //赛选银行列表
+<span class="cstat-no" title="statement not covered" >    state.ALLListBankCard = result.data</span>
+  },
+  GET_LISTBANKCARDDETAIL(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //银行卡详情
+<span class="cstat-no" title="statement not covered" >    state.bankCardDetail = result.data</span>
+  },
+  GET_INVITEURL(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //二维码
+<span class="cstat-no" title="statement not covered" >    state.inviteurl = result.message</span>
+  },
+  GET_NEWSLISTFOR(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //推广素材列表
+<span class="cstat-no" title="statement not covered" >    state.newsListFor = result.data</span>
+  },
+  GET_NEWSLIST(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //赛选列表
+<span class="cstat-no" title="statement not covered" >    state.newsList = result.data</span>
+  },
+  CREDITCARDNEWS(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //赛选列表
+<span class="cstat-no" title="statement not covered" >    state.creditCardNews = result.data</span>
+  },
+  GET_DETAILFORAPP(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //文章详情
+<span class="cstat-no" title="statement not covered" >    state.detailForApp = result.data</span>
+  },
+  GET_ORDERLISTFOR1(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //我的订单列表
+<span class="cstat-no" title="statement not covered" >    state.orderListFor1 = result</span>
+  },
+  GET_USERRELATED(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //我的订单列表
+    let data<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    result.data.forEach(<span class="fstat-no" title="function not covered" >(i</span>tem, index, input) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      item.imgShow = false</span>
+<span class="cstat-no" title="statement not covered" >      data = input</span>
+    })
+<span class="cstat-no" title="statement not covered" >    state.userrelated = data</span>
+  },
+  GET_RAKEBACKINFO(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //我的分佣列表
+<span class="cstat-no" title="statement not covered" >    state.rakeBackInfo = result.data</span>
+  },
+  GET_SUBORDINATENUM(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //我的推广头部列表
+<span class="cstat-no" title="statement not covered" >    state.subordinateNum = result.data</span>
+  },
+  GET_ERSUBORDINATENUM(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //我的二级推广头部列表
+<span class="cstat-no" title="statement not covered" >    state.erSubordinateNum = result.data</span>
+  },
+  GET_SUBORDINATEUSERLIST(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //我的推广列表
+<span class="cstat-no" title="statement not covered" >    state.subordinateUserList = result.data</span>
+  },
+  NEWERSUBORDINATEUSERLIST(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //我的滑动推广列表
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    state.subordinateUserList = state.subordinateUserList.concat(result)</span>
+  },
+  GET_ERSUBORDINATEUSERLIST(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result)</span>
+    //我的二级推广列表
+<span class="cstat-no" title="statement not covered" >    state.erSubordinateUserList = result.data</span>
+  },
+  //时间戳
+  CHANGETIME(state) {<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    state.time = new Date().getTime()</span>
+  },
+  //等待窗显示
+  AWAITTRUE(state) {<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    state.awaitShow = true</span>
+  },
+  //等待窗消失
+  AWAITFALSE(state) {<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    state.awaitShow = false</span>
+  },
+&nbsp;
+  GET_LISTSCHEDULEFORAPP(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+    //办卡进度列表
+<span class="cstat-no" title="statement not covered" >    state.listScheduleFor = result.data</span>
+  },
+  GET_BINBANKCARD(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result);</span>
+    //绑卡数据
+<span class="cstat-no" title="statement not covered" >    state.binBankCard = result.data</span>
+  },
+  GET_LASTORDERINFO(state, {re<span class="fstat-no" title="function not covered" >sult}) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    console.log(result);</span>
+    //绑卡数据
+<span class="cstat-no" title="statement not covered" >    state.lastOrderInfo = result.data</span>
+  },
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 17 2018 17:44:44 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/scroll/scroll.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/components/scroll</a> scroll.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/47</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/42</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;<span class="cstat-no" title="statement not covered" >t<span class="fstat-no" title="function not covered" >em</span>plate&gt;</span>
+  &lt;div ref="wrapper"&gt;
+    &lt;slot&gt;&lt;/slot&gt;
+<span class="cstat-no" title="statement not covered" >  &lt;/div&gt;</span>
+&lt;/template&gt;
+&lt;script type="text/ecmascript-6"&gt;
+  import BScroll from 'better-scroll'
+  export default {<span class="cstat-no" title="statement not covered" ></span>
+    props: {
+      /**<span class="cstat-no" title="statement not covered" ></span>
+       * 1 滚动的时候会派发scroll事件，会截流。
+       * <span class="fstat-no" title="function not covered" >2 滚动的时候实时派发scroll事件，不会截</span>流。<span class="cstat-no" title="statement not covered" ></span>
+       * 3 除了实时派发scroll事件，在swipe的情况下仍然能实时派发scroll事件
+<span class="cstat-no" title="statement not covered" >       */</span>
+      /*
+      * */
+      probeType: {
+        type: Number,
+        default: 1
+      },
+      //是否回弹
+      bounce: {
+        type: Boolean,
+        default: false
+      },
+      //是否是默认窗口高
+&nbsp;
+      /**
+       * 点击列表是否派发click事件
+       */
+      click: {
+        type: Boolean,
+        default: true
+      },
+      /**
+       * 是否开启横向滚动
+       */
+      scrollX: {
+        type: Boolean,
+        default: false
+      },
+      /**
+       * 是否派发滚动事件
+       */
+      listenScroll: {
+        type: Boolean,
+        default: false
+      },
+      /**
+       * 列表的数据
+       */
+      data: {
+        type: Array,
+        default: null
+      },
+      /**
+       * 是否派发滚动到底部的事件，用于上拉加载
+       */
+      pullup: {
+        type: Boolean,
+        default: false
+      },
+      /**
+       * 是否派发顶部下拉的事件，用于下拉刷新
+       */
+      pulldown: {
+        type: Boolean,
+        default: false
+      },
+      /**
+       * 是否派发列表滚动开始的事件
+       */
+      beforeScroll: {
+        type: Boolean,
+        default: false
+      },
+      /**
+       * 当数据更新后，刷新scroll的延时。
+       */
+      refreshDelay: {
+        type: Number,
+        default: 20
+      }
+    },
+    computed: {},
+    mounted() {
+      this.__boxheight(this.$refs.wrapper)
+      // 保证在DOM渲染完毕后初始化better-scroll
+      setTimeout(() =&gt; {
+        this._initScroll()
+      }, 20)
+    },<span class="fstat-no" title="function not covered" ></span>
+    methods: {<span class="cstat-no" title="statement not covered" ></span>
+      _initScroll() {
+<span class="cstat-no" title="statement not covered" >        if (!this.$refs.wrapper) {</span>
+          return
+<span class="cstat-no" title="statement not covered" >        }<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >        // better-scroll的初始</span>化
+        this.scroll = new BScroll(this.$refs.wrapper, {
+          probeType: this.probeType,
+          click: this.click,
+          scrollX: this.scrollX,
+          bounce: this.bou<span class="fstat-no" title="function not covered" >nce,</span>
+        })<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        // 是否派发滚动事件</span>
+<span class="cstat-no" title="statement not covered" >        if (this</span>.listenScroll) {
+          this.scroll.on('scroll', (pos) =&gt; {
+            this.$emit('scroll', pos)
+<span class="cstat-no" title="statement not covered" >          })</span>
+        }
+&nbsp;
+        // 是否派发滚动到底部事件，用于上拉加载
+        if (this.pullup) {
+          this.scroll.on('scrollEnd', () =&gt; {
+            // 滚动到底部
+            if (this.scroll.y &lt;= (this.scroll.maxScrollY + 50)) {
+<span class="cstat-no" title="statement not covered" >              this.$emit('scrollToEnd')</span>
+<span class="cstat-no" title="statement not covered" >            }<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >          })</span>
+        }
+&nbsp;
+        // 是否派发顶部下拉事件，用于下拉刷新
+        if (this.pulldown) {
+<span class="cstat-no" title="statement not covered" >          this.scroll.on('touchend', (pos) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            // 下拉动作<span class="fstat-no" title="function not covered" ></span></span>
+            if (pos.y &gt; 50) {
+<span class="cstat-no" title="statement not covered" >              this.$emit('pulldown')</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+          })
+        }
+&nbsp;
+        // 是否派发列表滚动开始的事件
+        if (this.beforeScroll) {
+<span class="cstat-no" title="statement not covered" >          this.scroll.on('beforeScrollStart', () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            this.$emit('beforeScrol<span class="fstat-no" title="function not covered" >l'</span>)</span>
+          })
+        }<span class="cstat-no" title="statement not covered" ></span>
+      },<span class="cstat-no" title="statement not covered" ></span>
+      disable() {
+        // 代理better-scroll的disable方法
+        this.scroll &amp;&amp; this.scroll.disable()
+      },
+      enable() {
+<span class="cstat-no" title="statement not covered" >        // 代理better-scroll的enable方法</span>
+<span class="cstat-no" title="statement not covered" >        this.scroll &amp;&amp; this.scroll.enable()<span class="fstat-no" title="function not covered" ></span></span>
+      },<span class="cstat-no" title="statement not covered" ></span>
+      refresh() {
+        // 代理better-scroll的refresh方法
+        this.scroll &amp;&amp; this.scroll.refresh()
+      },<span class="fstat-no" title="function not covered" ></span>
+      scrollTo() {
+<span class="cstat-no" title="statement not covered" >        // 代理better-scroll的scrollTo方法</span>
+        this.scroll &amp;&amp; this.scroll.scrollTo.apply(this.scroll, arguments)
+      },<span class="fstat-no" title="function not covered" ></span>
+      scrollToElement() {
+<span class="cstat-no" title="statement not covered" >        // 代理better-scroll的scrollToElement方</span>法
+        this.scroll &amp;&amp; this.scroll.scrollToElement.apply(this.scroll, arguments)
+      }<span class="fstat-no" title="function not covered" ></span>
+    },
+    wa<span class="cstat-no" title="statement not covered" >tch: {</span>
+      // 监听数据的变化，延时refreshDelay时间后调用refresh方法重新计算，保证滚动效果正常
+      data() {<span class="fstat-no" title="function not covered" ></span>
+        setTimeout(() =&gt; {
+<span class="cstat-no" title="statement not covered" >          this.refresh()</span>
+        }, this.refreshDelay)
+      },<span class="fstat-no" title="function not covered" ></span>
+      $route(to, form) {
+<span class="cstat-no" title="statement not covered" >        if (to.name === "productPage" || to.name === "creditCardPage") {</span>
+          this.refresh()
+        }
+      }
+    }
+  }<span class="fstat-no" title="function not covered" ></span>
+&lt;/script&gt;<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 17 2018 17:44:44 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>
